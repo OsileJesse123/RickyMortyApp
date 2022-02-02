@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">RickyMortyApp</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="rick_and_morty_header_photo">rick and morty header photo</string>
+    <string name="character_display_image">character display image</string>
+    <string name="dead_or_alive_status">dead or alive status</string>
+    <string name="rick_and_morty_header_image">rick and morty header image</string>
+    <string name="network_status">network status</string>
+    <string name="character_name"><b>Name: %s</b></string>
+    <string name="character_status"><b>Status: %s</b></string>
+    <string name="character_species"><b>Species: %s</b></string>
+    <string name="character_type"><b>Type: %s</b></string>
+    <string name="character_gender"><b>Gender: %s</b></string>
+    <string name="character_origin"><b>Origin: %s</b></string>
+    <string name="character_location"><b>Location: %s</b></string>
+    <string name="non">Type: Non</string>
+</resources>

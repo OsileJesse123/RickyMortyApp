@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+    <data>
+        <variable
+            name="rickMortyCharacter"
+            type="com.jesse.rickymortyapp.network.RickMortyCharacter" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_margin="1dp"
+        >
+
+        <ImageView
+            android:id="@+id/character_image"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:contentDescription="@string/character_display_image"
+            android:scaleType="centerCrop"
+            imageSrcUrl="@{rickMortyCharacter.image}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/hinata"
+             />
+
+        <ImageView
+            android:id="@+id/life_status_image"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:contentDescription="@string/dead_or_alive_status"
+            android:scaleType="fitCenter"
+            lifeStatusSrc="@{rickMortyCharacter.status}"
+            tools:src="@drawable/green_dot"
+            android:background="@drawable/life_status_bg"
+            android:padding="2dp"
+            app:layout_constraintWidth_percent=".1"
+            app:layout_constraintHeight_percent=".07"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias=".03"
+            app:layout_constraintHorizontal_bias=".9"
+            />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="#94434343"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent=".2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1" />
+
+        <TextView
+            android:id="@+id/character_name"
+            app:layout_constraintVertical_bias=".1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/view"
+            formatText="@{rickMortyCharacter.name}"
+            tools:text="Rick"
+            style="@style/character_item_text_style" />
+
+        <TextView
+            android:id="@+id/character_specie"
+            style="@style/character_item_text_style"
+            app:layout_constraintBottom_toBottomOf="@+id/view"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/character_name"
+            android:text="@{rickMortyCharacter.species}"
+            tools:text="Human" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
